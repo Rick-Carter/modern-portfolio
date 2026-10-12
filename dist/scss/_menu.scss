@@ -11,13 +11,12 @@
         width: 28px;
         height: 3px;
         margin: 0 0 5px 0;
-        background: #fff;
+        background: set-text-color($primary-color);
         @include easeOut;
     }
 
 
 // Rotate Into X with Menu Lines
-
 &.close{
     transform:rotate(180deg);
 
@@ -69,7 +68,7 @@
         padding: 0;
         background: darken($primary-color,5);
         list-style: none;
-        transform: translate3d(0,-100%, 0);
+        transform: translate3d(0, -100%, 0);
         @include easeOut;
 
         &.show{
@@ -88,7 +87,7 @@
             // Slide in from bottom
             transform: translate3d(0, 0, 0);
         }
-        
+
         .portrait{
         height: 250px;
         width: 250px;
@@ -118,7 +117,7 @@
         font-size: 30px;
         text-transform: uppercase;
         padding: 1rem 0;
-        color: #fff;
+        color: set-text-color($primary-color);
         text-decoration: none;
         @include easeOut;
 
@@ -131,6 +130,6 @@
 // Delay each nav item slide by .1s
 @for $x from 1 through 4 {
     .nav-item:nth-child(#{$x}){
-        transition-delay: $x * 0.1s;
+        transition-delay: $x *.1s;
     }
 }
